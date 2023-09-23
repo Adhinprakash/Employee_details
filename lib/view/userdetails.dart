@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:machine_task/const/colors.dart';
 import 'package:machine_task/const/constrians.dart';
 import 'package:machine_task/model/user_model/user_model.dart';
+import 'package:sizer/sizer.dart';
 
 class Userdeatails extends StatelessWidget {
   final UserModel user;
@@ -17,7 +18,7 @@ class Userdeatails extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.brown[100],
         appBar: AppBar(
-          toolbarHeight: 180,
+          toolbarHeight: 18.h,
           backgroundColor: Colors.brown[700],
           leading: const Icon(
             Icons.menu,
@@ -38,12 +39,12 @@ class Userdeatails extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: 2.h,
                 ),
                 Container(
-                    height: 250,
-                    width: 400,
+                    height: 25.h,
+                    width: 90.w,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.white),
@@ -52,8 +53,8 @@ class Userdeatails extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                            height: 100,
-                            width: 100,
+                            height: 10.h,
+                            width: 22.w,
                             padding: const EdgeInsets.all(20),
                             decoration: BoxDecoration(
                                 border: Border.all(
@@ -65,7 +66,7 @@ class Userdeatails extends StatelessWidget {
                               fit: BoxFit.cover,
                             )),
                         Text(
-                          '${user.firstName} ' '${user.lastName} ',
+                          '${user.firstName} ' '${user.lastName} ${user.maidenName}',
                           style: TextStyle(
                               color: primary,
                               fontSize: 16,
@@ -115,8 +116,8 @@ class Userdeatails extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    height: 250,
-                    width: 400,
+                    height: 25.h,
+                    width: 90.w,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.white),
@@ -125,8 +126,8 @@ class Userdeatails extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
-                          width: 10,
+                         SizedBox(
+                          width: 1.h,
                         ),
                         const Text(
                           "Personal details",
@@ -153,8 +154,8 @@ class Userdeatails extends StatelessWidget {
                 ),
                 kheight30,
                 Container(
-                  height: 250,
-                  width: 400,
+                  height: 25.h,
+                    width: 90.w,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
@@ -163,8 +164,8 @@ class Userdeatails extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        width: 10,
+                       SizedBox(
+                        width: 1.h,
                       ),
                       const Text(
                         "Address",
@@ -188,8 +189,8 @@ class Userdeatails extends StatelessWidget {
                 ),
                 kheight30,
                 Container(
-                  height: 250,
-                  width: 400,
+                   height: 25.h,
+                    width: 90.w,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
@@ -225,8 +226,8 @@ class Userdeatails extends StatelessWidget {
                   height: 30,
                 ),
                 Container(
-                    height: 200,
-                    width: 360,
+                  height: 25.h,
+                    width: 90.w,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.white),
@@ -263,8 +264,8 @@ class Userdeatails extends StatelessWidget {
                                         style: const TextStyle(color: Colors.white))
                                   ],
                                 ),
-                                const SizedBox(
-                                  width: 10,
+                                 SizedBox(
+                                  width: 1.h,
                                 ),
 
                                  Column(
@@ -272,7 +273,7 @@ class Userdeatails extends StatelessWidget {
                                   children: [
                                     const Text("CURRENCY", style: TextStyle(color: Colors.yellow)),
 
-                                    Text("${user.bank!.currency}" ,  style: TextStyle(color: Colors.white))
+                                    Text("${user.bank!.currency}" ,  style: const TextStyle(color: Colors.white))
                                   ],
                                 )
                               ],
@@ -281,8 +282,8 @@ class Userdeatails extends StatelessWidget {
                         ),
                         const SizedBox(width: 10,),
                           SizedBox(
-                            height: 45,
-                            width: 45,
+                            height: 23.sp,
+                            width: 23.sp,
                             child: Image.network("https://imgs.search.brave.com/fEPhKqsnDmiiMB2MZ6DadxtJXluk6E5cn1W-s-pQDFk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE0/LzA3L21hc3RlcmNh/cmQtbG9nby03LnBu/Zw"),
                           )
                       ],

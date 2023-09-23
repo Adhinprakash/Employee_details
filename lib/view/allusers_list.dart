@@ -4,6 +4,7 @@ import 'package:machine_task/const/colors.dart';
 import 'package:machine_task/controller/provider/get_userlistnotifier.dart';
 import 'package:machine_task/view/userdetails.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 class PaginatedUserList extends StatefulWidget {
   const PaginatedUserList({super.key});
@@ -33,7 +34,7 @@ class _PaginatedUserListState extends State<PaginatedUserList> {
         backgroundColor: Colors.brown[700],
 leading: const Icon(Icons.menu,color: Colors.white,),
 title: const Text("E M P L O Y E E ",style: TextStyle(color: Colors.white),),
-        toolbarHeight: 150,
+        toolbarHeight: 14.h,
        ),
         body:
         
@@ -52,7 +53,7 @@ title: const Text("E M P L O Y E E ",style: TextStyle(color: Colors.white),),
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        height: 80,
+                        height: 8.h,
                          decoration:  BoxDecoration(borderRadius:const BorderRadius.only(
                                 topLeft: Radius.circular(10),
                                   topRight: Radius.circular(10),
@@ -92,7 +93,7 @@ title: const Text("E M P L O Y E E ",style: TextStyle(color: Colors.white),),
                       child: TextButton(
                           onPressed:()async{
                           await  usernotifier.loadNextPage();
-                          } , // Trigger the loading of the next page
+                          } , 
                           child:const Text('Next'),
                         ),
                     ),
