@@ -66,17 +66,21 @@ title: const Text("E M P L O Y E E ",style: TextStyle(color: Colors.white),),
                                 offset: const Offset(0, 3), // changes position of shadow
                               ),
                                ],),
-                        child: ListTile(
-                          title: Text(value.userModel[index].firstName!,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w600),),
-                          leading: CircleAvatar(backgroundImage: NetworkImage(value.userModel[index].image!)),
-                          subtitle: Text("${value.userModel[index].username}",style:  const TextStyle(color: Color.fromARGB(193, 0, 0, 0)),),
-                          onTap: () =>
-                           Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                               Userdeatails(user: usernotifier.userModel[index],)),
-                                    )
+                        child: Padding(
+                          padding:  EdgeInsets.only(bottom: 6),
+                          child: ListTile(
+                            
+                            title: Text(value.userModel[index].firstName!,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w600),),
+                            leading: CircleAvatar(backgroundImage: NetworkImage(value.userModel[index].image!)),
+                            subtitle: Text("${value.userModel[index].username}",style:  const TextStyle(color: Color.fromARGB(193, 0, 0, 0)),),
+                            onTap: () =>
+                             Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                 Userdeatails(user: usernotifier.userModel[index],)),
+                                      )
+                          ),
                         ),
                       ),
                     );

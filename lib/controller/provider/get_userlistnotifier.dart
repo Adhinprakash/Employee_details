@@ -9,7 +9,19 @@ class Getuserlistprovider extends ChangeNotifier {
 
   int limit = 10;
   int skip = 0;
+  bool checked=false;
   bool isLoading = false;
+
+  int index=0;
+
+  changeIndex(int value){
+    index=value;
+    notifyListeners();
+  }
+  checkfirstpage(){
+    checked=true;
+    notifyListeners();
+  }
 
   
   Future<List<UserModel>> fetchData() async {
